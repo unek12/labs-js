@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  (async () => {
+    let text = await fetch('/api/name').then(res => res.text());
+    document.body.append(text)
+  })()
+</script>
+</body>
+</html>

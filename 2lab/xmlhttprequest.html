@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let xhr = new XMLHttpRequest();
+
+  xhr.open('GET', '/api/name');
+
+  xhr.responseType = 'text';
+
+  xhr.send();
+
+  // тело ответа {"сообщение": "Привет, мир!"}
+  xhr.onload = function() {
+    document.body.append(xhr.response)
+  };
+</script>
+</body>
+</html>
